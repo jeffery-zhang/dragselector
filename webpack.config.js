@@ -1,8 +1,6 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
 const path = require("path");
-const TerserPlugin = require('terser-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const isProduction = process.env.NODE_ENV == "production";
 
@@ -12,21 +10,11 @@ const config = {
   entry: "./src/index.ts",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: 'index.js',
+    filename: 'index.min.js',
     libraryTarget: 'umd',
     libraryExport: 'default',
   },
-  devServer: {
-    static: path.resolve(__dirname, 'dist'),
-    compress: true,
-    port: 5000,
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './index.html',
-      filename: 'index.html',
-    })
-  ],
+  plugins: [],
   module: {
     rules: [
       {
@@ -50,19 +38,6 @@ const config = {
         ],
       },
       {
-        test: /\.s[ac]ss$/i,
-        use: [
-          stylesHandler,
-          {
-            loader: "css-loader",
-            options: {
-              modules: true
-            }
-          },
-          "sass-loader",
-        ],
-      },
-      {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
         type: "asset",
       },
@@ -72,15 +47,7 @@ const config = {
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".jsx", ".js", ".css", ".scss", ".sass", "..."],
-  },
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new TerserPlugin({
-        include: /\.min\.js$/, //匹配min.js结尾的文件进行压缩
-      }),
-    ],
+    extensions: [".tsx", ".ts", ".jsx", ".js", ".css", "..."],
   },
 };
 
