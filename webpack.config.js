@@ -39,7 +39,15 @@ const config = {
       },
       {
         test: /\.css$/i,
-        use: [stylesHandler, "css-loader"],
+        use: [
+          stylesHandler,
+          {
+            loader: "css-loader",
+            options: {
+              modules: true
+            }
+          },
+        ],
       },
       {
         test: /\.s[ac]ss$/i,
