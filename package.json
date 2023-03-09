@@ -1,7 +1,7 @@
 {
-  "name": "my-webpack-project",
+  "name": "drag-selector",
   "version": "1.0.0",
-  "description": "My webpack project",
+  "description": "drag selector",
   "main": "/src/index.ts",
   "scripts": {
     "dev": "webpack serve --hot",
