@@ -2,7 +2,8 @@
   "name": "drag-selector",
   "version": "1.0.0",
   "description": "drag selector",
-  "main": "/src/index.ts",
+  "main": "/dist/index.min.js",
+  "files": ["dist"],
   "scripts": {
     "dev": "webpack serve --hot",
     "build": "webpack --mode=production --node-env=production",
