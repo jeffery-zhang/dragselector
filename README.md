@@ -1,6 +1,8 @@
 # DragSelector
 DragSelector is a small and easy-to-use JavaScript library that allows you to select HTML elements by drag-and-drop, just like selecting files on your desktop.
 
+You can find the source code [here](https://github.com/jeffery-zhang/dragselector)
+
 # Getting started
 You can use NPM or YARN to install the library like this:
 ``` bash
