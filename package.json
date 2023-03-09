@@ -11,6 +11,14 @@
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch"
   },
+  "keywords": [
+    "drag",
+    "selector",
+    "js",
+    "javascript",
+    "ts",
+    "typescript"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jeffery-zhang/dragselector.git"
