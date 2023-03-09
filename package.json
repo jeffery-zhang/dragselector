@@ -1,6 +1,6 @@
 {
   "name": "drag-selector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "drag selector",
   "main": "/dist/index.min.js",
   "files": ["dist"],
