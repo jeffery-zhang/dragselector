@@ -45,5 +45,8 @@ const dragger = new DragSelector(parentDom, {
   },
   // The deep property is a boolean value. When set to true, DragSelector will search for all child elements under the parent element. When set to false, DragSelector will only search for the first level of child elements
   deep: true, // default value is false
+  selectorStyle: { // Customize selection box styles, using single camel case for style names
+    backgroundColor: '#red',
+  },
 })
 ```

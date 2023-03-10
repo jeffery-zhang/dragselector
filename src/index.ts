@@ -3,6 +3,9 @@ import styles from './index.css'
 export interface DragSelectorOptions {
   callback?: (results: HTMLElement[], elementsWithoutDragger?: HTMLElement[]) => void
   deep?: boolean
+  selectorStyle: {
+    [key: string]: string
+  }
 } 
 
 // default callback
@@ -34,6 +37,7 @@ class Dragger {
     this.options = {
       callback: defaultCallback,
       deep: false,
+      selectorStyle: {},
       ...options,
     }
 
@@ -116,6 +120,10 @@ class Dragger {
       this.draggableDom.style.top = `${event.clientY}px`
       this.draggableDom.style.width = '0.5px'
       this.draggableDom.style.height = '0.5px'
+
+      Object.keys(this.options.selectorStyle).forEach((key: any) => {
+        this.draggableDom.style[key] = this.options.selectorStyle[key]
+      })
 
       const [results, elementsWithoutDragger] = this.findInsideElements()
       this.options.callback(results, elementsWithoutDragger)
