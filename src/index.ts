@@ -158,9 +158,3 @@ class Dragger {
 }
 
 export default Dragger
-
-const root = document.getElementById('root')
-
-const dragger = new Dragger(root, {
-  deep: true,
-})
