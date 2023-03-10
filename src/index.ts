@@ -107,6 +107,7 @@ class Dragger {
   }
 
   private onMousedown = (event: MouseEvent) => {
+    event.preventDefault()
     // mouse left button
     if (event.button === 0) {
       // create selection box
